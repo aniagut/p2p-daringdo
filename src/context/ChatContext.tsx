@@ -16,7 +16,7 @@ interface ChatValue {
 }
 
 const gun = Gun({
-    peers: ['http:16.171.239.168/gun']
+    peers: ['ws.p2p-daringdo.lol/gun']
 })
 
 const history = [] as IMessage[];

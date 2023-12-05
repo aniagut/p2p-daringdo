@@ -20,7 +20,7 @@ import { UserContext } from "./UserContext";
 import { IPeer } from "../types/peer";
 import Gun from "gun";
 const gun = Gun({
-    peers: ['http:16.171.239.168/gun']
+    peers: ['ws.p2p-daringdo.lol/gun']
 })
 interface RoomValue {
     stream?: MediaStream;
@@ -114,8 +114,7 @@ export const RoomProvider: React.FunctionComponent = ({ children }) => {
 
     useEffect(() => {
         const peer = new Peer(userId, {
-            host: "16.170.143.77",
-            port: 80,
+            host: "peerjs.p2p-daringdo.lol",
             path: "/",
         });
         setMe(peer);
